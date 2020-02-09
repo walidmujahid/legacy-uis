@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-import { CSSTransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 import "./modal.scss";
 
@@ -12,7 +12,7 @@ class Modal extends Component {
     const { children, onClose } = this.props;
     return ReactDOM.createPortal(
       <div>
-        <CSSTransitionGroup
+        <CSSTransition
           transitionName="modal-container"
           transitionAppear
           transitionLeave
@@ -28,7 +28,7 @@ class Modal extends Component {
             role="button"
             tabIndex={0}
           />
-        </CSSTransitionGroup>
+        </CSSTransition>
         {children}
       </div>,
       modalRoot,

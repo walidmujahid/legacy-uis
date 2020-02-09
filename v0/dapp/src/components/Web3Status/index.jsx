@@ -3,7 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
-import { CSSTransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import { isHexStrict, toChecksumAddress } from "web3-utils";
 import { withTranslation } from "react-i18next";
 
@@ -61,7 +61,7 @@ class Web3Status extends Component {
 
     return (
       <Modal onClose={() => this.setState({ showModal: false })}>
-        <CSSTransitionGroup
+        <CSSTransition
           transitionName="token-modal"
           transitionAppear
           transitionLeave
@@ -75,7 +75,7 @@ class Web3Status extends Component {
               {this.renderPendingTransactions()}
             </div>
           </div>
-        </CSSTransitionGroup>
+        </CSSTransition>
       </Modal>
     );
   }

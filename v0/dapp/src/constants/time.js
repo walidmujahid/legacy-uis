@@ -5,6 +5,11 @@ export const SABLIER_FORMAT_DAY = "DD MMM YYYY";
 export const SABLIER_FORMAT_MONTH = "MMM YYYY";
 export const SABLIER_FORMAT_HOUR = "DD MMM YYYY @ h:00a";
 
+
+export const SECONDS_IN_FIFTEEN_MINUTES = 900;
+export const SECONDS_IN_MINUTE = 60;
+
+
 /**
  * We gauge time using blocks which, on Ethereum, are mined roughly once per 15 seconds.
  * We use that interval as the most basic time unit of Sablier.

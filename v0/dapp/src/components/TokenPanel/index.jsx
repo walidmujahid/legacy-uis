@@ -3,7 +3,7 @@ import classnames from "classnames";
 import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
-import { CSSTransitionGroup } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 import { withTranslation } from "react-i18next";
 
 import FaChevronCircleDown from "../../assets/images/fa-chevron-circle-down.svg";
@@ -124,7 +124,7 @@ class TokenPanel extends Component {
 
     return (
       <Modal onClose={() => this.setState({ isShowingModal: false, searchQuery: "" })}>
-        <CSSTransitionGroup
+        <CSSTransition
           transitionName="token-modal"
           transitionAppear
           transitionLeave
@@ -146,7 +146,7 @@ class TokenPanel extends Component {
             </div>
             <div className="token-modal__token-list">{this.renderTokenList()}</div>
           </div>
-        </CSSTransitionGroup>
+        </CSSTransition>
       </Modal>
     );
   }

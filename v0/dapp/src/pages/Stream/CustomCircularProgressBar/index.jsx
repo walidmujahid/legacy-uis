@@ -1,7 +1,7 @@
 import React from "react";
-import CircularProgressBar from "react-circular-progressbar";
+import { CircularProgressbar } from 'react-circular-progressbar';
 
-const CustomCircularProgressBar = props => {
+const CustomCircularProgressbar = props => {
   const { children, ...otherProps } = props;
 
   return (
@@ -13,7 +13,7 @@ const CustomCircularProgressBar = props => {
           position: "absolute",
         }}
       >
-        <CircularProgressBar {...otherProps} />
+        <CircularProgressbar {...otherProps} />
       </div>
       <div
         style={{
@@ -32,4 +32,4 @@ const CustomCircularProgressBar = props => {
   );
 };
 
-export default CustomCircularProgressBar;
+export default CustomCircularProgressbar;
