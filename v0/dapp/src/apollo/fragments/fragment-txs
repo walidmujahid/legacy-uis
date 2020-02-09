@@ -1,0 +1,5 @@
+fragment Txs on Stream {
+  txs(where: { event: \"CreateStream\" }) {
+    ...Transaction
+  }
+}

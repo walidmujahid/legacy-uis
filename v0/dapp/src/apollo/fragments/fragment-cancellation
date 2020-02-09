@@ -1,0 +1,11 @@
+fragment Cancellation on Cancellation {
+  id
+  recipientBalance
+  senderBalance
+  timestamp
+  token {
+    address: id
+    decimals
+  }
+  txhash
+}

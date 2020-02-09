@@ -1,0 +1,5 @@
+query Streams($recipient: String!) {
+  streams(first: 200, orderBy: timestamp, orderDirection: desc, where: { recipient: $recipient }) {
+    ...Stream
+  }
+}

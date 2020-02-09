@@ -1,0 +1,29 @@
+fragment LocalHistory on Stream {
+  bundles @client {
+    deposit {
+      ...Bundle
+    }
+  }
+  cancellation {
+    bundles @client {
+      recipientBalance {
+        ...Bundle
+      }
+      senderBalance {
+        ...Bundle
+      }
+    }
+    timeLabel @client
+  }
+  timeLabels @client {
+    depositTime
+  }
+  withdrawals(orderBy: timestamp, orderDirection: desc) {
+    bundles @client {
+      amount {
+        ...Bundle
+      }
+    }
+    timeLabel @client
+  }
+}

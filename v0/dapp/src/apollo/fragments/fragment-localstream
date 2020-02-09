@@ -1,0 +1,33 @@
+fragment LocalStream on Stream {
+  cancellation {
+    timeLabel @client
+  }
+  timeLabels @client {
+    depositTime
+    passed
+    remaining
+    startTime
+    stopTime
+  }
+  status @client
+  bundles @client {
+    deposit {
+      ...Bundle
+    }
+    outstanding {
+      ...Bundle
+    }
+    streamed {
+      ...Bundle
+    }
+    ratePerSecond {
+      ...Bundle
+    }
+    withdrawable {
+      ...Bundle
+    }
+    withdrawn {
+      ...Bundle
+    }
+  }
+}

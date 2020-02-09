@@ -1,0 +1,15 @@
+fragment History on Stream {
+  id
+  cancellation {
+    ...Cancellation
+  }
+  deposit
+  ratePerSecond
+  token {
+    address: id
+    symbol
+  }
+  ...LocalHistory
+  ...Txs
+  ...Withdrawals
+}

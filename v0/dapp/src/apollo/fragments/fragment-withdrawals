@@ -1,0 +1,5 @@
+fragment Withdrawals on Stream {
+  withdrawals(orderBy: timestamp, orderDirection: desc) {
+    ...Withdrawal
+  }
+}

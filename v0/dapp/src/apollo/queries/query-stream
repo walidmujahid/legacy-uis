@@ -1,0 +1,5 @@
+query Stream($id: ID!) {
+  stream(id: $id) {
+    ...Stream
+  }
+}

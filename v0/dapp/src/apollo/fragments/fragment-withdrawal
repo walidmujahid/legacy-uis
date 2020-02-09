@@ -1,0 +1,9 @@
+fragment Withdrawal on Withdrawal {
+  id
+  amount
+  timestamp
+  token {
+    address: id
+    decimals
+  }
+}

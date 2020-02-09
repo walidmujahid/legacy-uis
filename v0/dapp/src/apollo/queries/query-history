@@ -1,0 +1,10 @@
+query History($proxyStreamId: ID!) {
+  history: proxyStream(id: $proxyStreamId) {
+    id
+    sender
+    recipient
+    stream {
+      ...History
+    }
+  }
+}

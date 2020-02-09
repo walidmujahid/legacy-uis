@@ -1,0 +1,19 @@
+fragment Stream on Stream {
+  id
+  cancellation {
+    ...Cancellation
+  }
+  deposit
+  ratePerSecond
+  recipient
+  sender
+  startTime
+  stopTime
+  timestamp
+  token {
+    ...Token
+  }
+  ...Txs
+  ...Withdrawals
+  ...LocalStream
+}

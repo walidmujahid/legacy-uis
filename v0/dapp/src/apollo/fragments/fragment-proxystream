@@ -1,0 +1,8 @@
+fragment ProxyStream on ProxyStream {
+  id
+  sender
+  recipient
+  stream {
+    ...Stream
+  }
+}

@@ -1,0 +1,5 @@
+query ProxyStreams($sender: String!) {
+  proxyStreams(first: 200, orderBy: timestamp, orderDirection: desc, where: { sender: $sender }) {
+    ...ProxyStream
+  }
+}

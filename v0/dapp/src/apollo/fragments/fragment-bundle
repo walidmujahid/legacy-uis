@@ -1,0 +1,6 @@
+fragment Bundle on Bundle {
+  atomicUnits
+  cash
+  percentage
+  units
+}
